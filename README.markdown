@@ -9,8 +9,7 @@ These are some dot files/folders I want to maintain between multiple computers.
 
 ### Installations:
 To run the install script, just:
-``
-git clone git@github.com:dancrew32/dotfiles.git &&
-cd dotfiles &&
-sudo ./install/freshDistro.sh
-``
+
+    git clone git@github.com:dancrew32/dotfiles.git &&
+    cd dotfiles &&
+    sudo ./install/freshDistro.sh
