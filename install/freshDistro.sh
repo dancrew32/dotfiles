@@ -46,5 +46,10 @@ sudo rm libevent* -rf && sudo rm phpsh -rf &&
 sudo apt-get -y autoclean && sudo apt-get -y autoremove && sudo apt-get -y clean && sudo apt-get -y remove && sudo deborphan | args sudo apt-get -y remove --purge
 # make nice folders
 mkdir ~/www && mkdir ~/scripts &&
+#git setup
+git config --global user.name "dancrew32" &&
+git config --global user.email dancrew32@gmail.com &&
+sudo apt-get -y install meld &&
+git config --global merge.tool "meld" &&
 source ~/.bashrc && cd ~/ && clear && echo "All set!"
 
