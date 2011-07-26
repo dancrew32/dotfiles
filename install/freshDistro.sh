@@ -2,9 +2,11 @@
 # I assume you have git already if you've downloaded this file...
 cd ~/Desktop &&
 # get latest first...
+sudo echo "deb http://dl.google.com/linux/deb/ stable non-free main" | tee -a /etc/apt/sources.list &&
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - &&
 sudo apt-get update && sudo apt-get upgrade &&
 # base stuff
-sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts chromium-browser tasksel && 
+sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts google-chrome-stable tasksel && 
 sudo gem update --system && sudo gem update && sudo gem install rake &&
 # safe rm
 wget the file http://safe-rm.googlecode.com/files/safe-rm-0.8.tar.gz
