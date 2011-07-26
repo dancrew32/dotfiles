@@ -1,10 +1,17 @@
 #!/bin/bash
+# I assume you have git already if you've downloaded this file...
 cd ~/Desktop &&
-sudo apt-get install build-essential msttcorefonts safe-rm chromium-browser git tasksel && 
+# get latest first...
+sudo apt-get update && sudo apt-get upgrade &&
+# base stuff
+sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts safe-rm chromium-browser tasksel && 
+sudo gem update --system && sudo gem update && sudo gem install rake &&
+#php stuff
 sudo tasksel install lamp-server && 
 sudo apt-get install phpmyadmin &&
 sudo a2enmod rewrite &&
 wget http://www.monkey.org/~provos/libevent-1.4.8-stable.tar.gz &&
+#memcached
 tar xfz libevent-1.4.8-stable.tar.gz &&
 cd libevent-1.4.8-stable &&
 ./configure && make && sudo make install &&
@@ -15,12 +22,17 @@ cd memcached-1.2.6 &&
 ./configure && make && sudo make install &&
 apt-get install php5-memcache &&
 apt-get install php-pear &&
-apt-get install php5-cli python &&
+apt-get install php5-cli &&
 wget http://www.phpsh.org/phpsh-latest.tgz &&
 tar xvfz phpsh-latest.tgz &&
 cd phpsh && chmod 755 phpsh && sudo python setup.py build && sudo python setup.py install && cd ~/Desktop &&
+# update font cache
 sudo fc-cache -fv &&
-sudo apt-get install redshift virtualbox-ose moc &&
-sudo apt-get remove --purge rhythmbox gwibber 
-
+# get more cool stuff
+sudo apt-get install redshift virtualbox-ose moc filezilla &&
+sudo gem install vimgolf &&
+# get rid of suck
+sudo apt-get remove --purge rhythmbox gwibber gwibber-service evolution &&
+sudo apt-get remove evolution-indicator && sudo apt-get remove indicator-messages &&
+sudo apt-get remove indicator-me && killall gnome-panel &&
 
