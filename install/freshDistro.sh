@@ -36,6 +36,6 @@ sudo fc-cache -fv &&
 sudo apt-get install redshift virtualbox-ose moc filezilla safe-rm &&
 sudo gem install vimgolf &&
 # get rid of suck
-sudo apt-get remove --purge rhythmbox gwibber gwibber-service evolution &&
+sudo apt-get remove --purge rhythmbox gwibber gwibber-service shotwell banshee pitivi empathy evolution &&
 sudo apt-get remove evolution-indicator && sudo apt-get remove indicator-messages &&
 sudo apt-get remove indicator-me && killall gnome-panel
