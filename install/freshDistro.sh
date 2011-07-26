@@ -4,8 +4,14 @@ cd ~/Desktop &&
 # get latest first...
 sudo apt-get update && sudo apt-get upgrade &&
 # base stuff
-sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts safe-rm chromium-browser tasksel && 
+sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts chromium-browser tasksel && 
 sudo gem update --system && sudo gem update && sudo gem install rake &&
+# safe rm
+wget the file http://safe-rm.googlecode.com/files/safe-rm-0.8.tar.gz
+tar zvxf safe-rm-0.8.tar.gz
+cd safe-rm-0.8
+mv /bin/rm /bin/old-rm
+mv safe-rm /bin/rm
 #php stuff
 sudo tasksel install lamp-server && 
 sudo apt-get install phpmyadmin &&
