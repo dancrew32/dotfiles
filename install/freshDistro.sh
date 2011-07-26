@@ -1,5 +1,7 @@
 #!/bin/bash
 # I assume you have git already if you've downloaded this file...
+cp .bashrc .vimrc .bash_aliases .inputrc ~/ &&
+cp -R .vim ~/.vim &&
 cd ~/Desktop &&
 # get latest first...
 sudo echo "deb http://dl.google.com/linux/deb/ stable non-free main" | tee -a /etc/apt/sources.list &&
@@ -9,11 +11,11 @@ sudo apt-get update && sudo apt-get upgrade &&
 sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts google-chrome-stable tasksel && 
 sudo gem update --system && sudo gem update && sudo gem install rake &&
 # safe rm
-wget the file http://safe-rm.googlecode.com/files/safe-rm-0.8.tar.gz
-tar zvxf safe-rm-0.8.tar.gz
-cd safe-rm-0.8
-mv /bin/rm /bin/old-rm
-mv safe-rm /bin/rm
+wget the file http://safe-rm.googlecode.com/files/safe-rm-0.8.tar.gz &&
+tar zvxf safe-rm-0.8.tar.gz &&
+cd safe-rm-0.8 &&
+mv /bin/rm /bin/old-rm &&
+mv safe-rm /bin/rm &&
 #php stuff
 sudo tasksel install lamp-server && 
 sudo apt-get install phpmyadmin &&
