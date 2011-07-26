@@ -46,5 +46,5 @@ sudo rm libevent* -rf && sudo rm phpsh -rf &&
 sudo apt-get -y autoclean && sudo apt-get -y autoremove && sudo apt-get -y clean && sudo apt-get -y remove && sudo deborphan | args sudo apt-get -y remove --purge
 # make nice folders
 mkdir ~/www && mkdir ~/scripts &&
-source ~/.bashrc && clear && echo "all set!"
+source ~/.bashrc && cd ~/ && clear && echo "All set!"
 
