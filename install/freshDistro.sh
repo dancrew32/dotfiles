@@ -10,12 +10,6 @@ sudo apt-get update && sudo apt-get upgrade &&
 # base stuff
 sudo apt-get install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts google-chrome-stable tasksel && 
 sudo gem update && sudo gem install rake &&
-# safe rm
-wget the file http://safe-rm.googlecode.com/files/safe-rm-0.8.tar.gz &&
-tar zvxf safe-rm-0.8.tar.gz &&
-cd safe-rm-0.8 &&
-mv /bin/rm /bin/old-rm &&
-mv safe-rm /bin/rm &&
 #php stuff
 sudo tasksel install lamp-server && 
 sudo apt-get install phpmyadmin &&
@@ -39,7 +33,7 @@ cd phpsh && chmod 755 phpsh && sudo python setup.py build && sudo python setup.p
 # update font cache
 sudo fc-cache -fv &&
 # get more cool stuff
-sudo apt-get install redshift virtualbox-ose moc filezilla &&
+sudo apt-get install redshift virtualbox-ose moc filezilla safe-rm &&
 sudo gem install vimgolf &&
 # get rid of suck
 sudo apt-get remove --purge rhythmbox gwibber gwibber-service evolution &&
