@@ -34,5 +34,4 @@ sudo gem install vimgolf &&
 # get rid of suck
 sudo apt-get remove --purge rhythmbox gwibber gwibber-service evolution &&
 sudo apt-get remove evolution-indicator && sudo apt-get remove indicator-messages &&
-sudo apt-get remove indicator-me && killall gnome-panel &&
-
+sudo apt-get remove indicator-me && killall gnome-panel
