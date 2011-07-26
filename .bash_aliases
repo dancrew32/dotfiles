@@ -142,7 +142,7 @@ function loop() {
 }
 
 # dotfile editing
-alias ebrc='vi ~/.bashrc && source ~/.bashrc'
+alias ebrc='svi ~/.bash_aliases && source ~/.bashrc'
 alias gebrc='gedit ~/.bashrc && source ~/.bashrc'
 alias todo='vi ~/Desktop/.todo'
 
@@ -152,7 +152,7 @@ function say() {
 }
 
 #vim aliases
-alias evrc='vi ~/.vimrc && source ~/.vimrc'
+alias evrc='svi ~/.vimrc && source ~/.vimrc'
 alias v='/usr/local/bin/v'
 
 #mysql
