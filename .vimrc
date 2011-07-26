@@ -45,3 +45,7 @@ nmap <silent> <C-n> :tabnext<CR>
 nmap <silent> <C-p> :tabprev<CR>
 imap <silent> <C-n> <esc><C-n>
 imap <silent> <C-p> <esc><C-p>
+
+" recursively grep current directory for word under cursor
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
