@@ -3,6 +3,6 @@
 
 These are some dot files/folders I want to maintain between multiple computers.
 
-Stuff like:
-1. bashrc, inputrc, vimrc
-2. vim plugins that I dig
+### Stuff like:
+* bashrc, inputrc, vimrc
+* vim plugins that I dig
