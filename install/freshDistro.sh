@@ -52,11 +52,11 @@ git config --global user.name "dancrew32" &&
 git config --global user.email dancrew32@gmail.com &&
 sudo apt-get -y install meld &&
 git config --global merge.tool "meld" &&
-source ~/.bashrc && cd ~/ && clear && echo "Setup Complete! \n\nRebooting in\n" &&
-echo "5...\n" && sleep 1 &&
-echo "4...\n" && sleep 1 &&
-echo "3...\n" && sleep 1 &&
-echo "2...\n" && sleep 1 &&
-echo "1...\n" && sleep 1 &&
+source ~/.bashrc && cd ~/ && clear && echo "Setup Complete! Rebooting in:" &&
+echo "5....." && sleep 1 &&
+echo "4...." && sleep 1 &&
+echo "3..." && sleep 1 &&
+echo "2.." && sleep 1 &&
+echo "1." && sleep 1 &&
 echo "Rebooting..." && sudo reboot
 
