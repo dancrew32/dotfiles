@@ -8,7 +8,7 @@ sudo echo "deb http://dl.google.com/linux/deb/ stable non-free main" | tee -a /e
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - &&
 sudo apt-get -y update && sudo apt-get -y upgrade &&
 # base stuff
-sudo apt-get -y install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts google-chrome-stable exuberant-ctags tasksel && 
+sudo apt-get -y install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts chromium-browser chromium-browser-l10n exuberant-ctags tasksel && 
 sudo gem update && sudo gem install rake &&
 #php stuff
 sudo tasksel install lamp-server && 
@@ -35,7 +35,10 @@ cd phpsh && sudo python setup.py build && sudo python setup.py install && cd ~/D
 sudo fc-cache -fv &&
 # get more cool stuff
 sudo apt-get -y install redshift virtualbox-ose moc filezilla safe-rm git-gui gitk &&
+git clone https://github.com/joelthelion/autojump.git && cd autojump && sudo ./install.sh && cd ~/Desktop && sudo rm autojump -rf &&
 sudo gem install vimgolf &&
+sudo apt-get -y install vlc mplayer gsfonts gsfonts-x11 flashplugin-nonfree &&
+sudo apt-get -y install wine playonlinux unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack lha arj cabextract file-roller &&
 # get rid of suck
 sudo apt-get -y remove --purge rhythmbox gwibber gwibber-service shotwell banshee pitivi empathy evolution &&
 sudo apt-get -y remove evolution-indicator && sudo apt-get -y remove indicator-messages &&
@@ -43,13 +46,17 @@ sudo apt-get -y remove indicator-me && killall gnome-panel &&
 # clean up yo stuffs
 cd ~/Desktop &&
 sudo rm libevent* -rf && sudo rm phpsh -rf &&
-sudo apt-get -y autoclean && sudo apt-get -y autoremove && sudo apt-get -y clean && sudo apt-get -y remove && sudo deborphan | args sudo apt-get -y remove --purge
-# make nice folders
-mkdir ~/www && mkdir ~/scripts &&
+sudo apt-get -y autoclean && sudo apt-get -y autoremove && sudo apt-get -y clean && sudo apt-get -y remove && 
 #git setup
 git config --global user.name "dancrew32" &&
 git config --global user.email dancrew32@gmail.com &&
 sudo apt-get -y install meld &&
 git config --global merge.tool "meld" &&
-source ~/.bashrc && cd ~/ && clear && echo "All set!"
+source ~/.bashrc && cd ~/ && clear && echo "Setup Complete! \n\nRebooting in\n" &&
+echo "5...\n" && sleep 1 &&
+echo "4...\n" && sleep 1 &&
+echo "3...\n" && sleep 1 &&
+echo "2...\n" && sleep 1 &&
+echo "1...\n" && sleep 1 &&
+echo "Rebooting..." && sudo reboot
 
