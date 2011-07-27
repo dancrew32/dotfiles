@@ -55,6 +55,7 @@ sudo apt-get -y install meld &&
 git config --global merge.tool "meld" &&
 source ~/.bashrc && cd ~/dotfiles &&
 sudo mv apache2 /etc/apache2 && aprest &&
+sudo rm ~/dotfiles -rf &&
 clear && echo "Setup Complete! Rebooting in:" &&
 echo "5....." && sleep 1 &&
 echo "4...." && sleep 1 &&
