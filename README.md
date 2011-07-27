@@ -10,6 +10,7 @@ These are some dot files/folders I want to maintain between multiple computers.
 ### Installations:
 To run the install script, just:
 
+	cd ~/
 	sudo apt-get -y install git &&
     git clone git://github.com/dancrew32/dotfiles.git &&
     cd dotfiles &&
