@@ -55,7 +55,9 @@ sudo apt-get -y install meld &&
 git config --global merge.tool "meld" &&
 source ~/.bashrc && cd ~/dotfiles &&
 sudo mv apache2/httpd.conf /etc/apache2/httpd.conf && 
-sudo mv apache2/sites-available/default /etc/apache2/sites-available/default && sudo /etc/init.d/apache2 restart &&
+sudo mv apache2/sites-available/default /etc/apache2/sites-available/default &&
+mkdir ~/www &&
+sudo /etc/init.d/apache2 restart &&
 sudo rm ~/dotfiles -rf &&
 clear && echo "Setup Complete! Rebooting in:" &&
 echo "5....." && sleep 1 &&
