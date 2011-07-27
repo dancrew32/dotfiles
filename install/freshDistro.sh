@@ -59,7 +59,8 @@ sudo mv apache2/sites-available/default /etc/apache2/sites-available/default &&
 mkdir ~/www &&
 sudo /etc/init.d/apache2 restart &&
 sudo rm ~/dotfiles -rf &&
-clear && echo "Setup Complete! Rebooting in:" &&
+cd ~/ && sudo chown dan .vimrc .vim .viminfo .bash_aliases .gitconfig .inputrc &&
+clear && echo "Setup Complete! Rebooting in:" && 
 echo "5....." && sleep 1 &&
 echo "4...." && sleep 1 &&
 echo "3..." && sleep 1 &&
