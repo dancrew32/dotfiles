@@ -48,4 +48,5 @@ imap <silent> <C-p> <esc><C-p>
 
 " recursively grep current directory for word under cursor
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-
+" open quicklist items in new tabs (avoid duplicates)
+set switchbuf+=usetab,newtab
