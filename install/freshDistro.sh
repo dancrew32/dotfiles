@@ -8,7 +8,7 @@ sudo echo "deb http://dl.google.com/linux/deb/ stable non-free main" | tee -a /e
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - &&
 sudo apt-get -y update && sudo apt-get -y upgrade &&
 # base stuff
-sudo apt-get -y install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts chromium-browser chromium-browser-l10n exuberant-ctags tasksel && 
+sudo apt-get -y install build-essential ubuntu-restricted-extras vim python ruby rubygems ruby1.8-dev msttcorefonts parcellite highlight chromium-browser chromium-browser-l10n exuberant-ctags tasksel && 
 sudo gem update && sudo gem install rake &&
 #php stuff
 sudo tasksel install lamp-server && 
@@ -41,7 +41,7 @@ sudo gem install vimgolf &&
 sudo apt-get -y install vlc mplayer espeak gsfonts gsfonts-x11 flashplugin-nonfree &&
 sudo apt-get -y install wine playonlinux unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack lha arj cabextract file-roller &&
 # get rid of suck
-sudo apt-get -y remove --purge rhythmbox gwibber gwibber-service shotwell banshee pitivi empathy evolution &&
+sudo apt-get -y remove --purge rhythmbox ubuntuone* gwibber gwibber-service shotwell banshee pitivi empathy evolution &&
 sudo apt-get -y remove evolution-indicator && sudo apt-get -y remove indicator-messages &&
 sudo apt-get -y remove indicator-me && killall gnome-panel &&
 # clean up yo stuffs
