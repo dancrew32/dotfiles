@@ -50,3 +50,11 @@ imap <silent> <C-p> <esc><C-p>
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 " open quicklist items in new tabs (avoid duplicates)
 set switchbuf+=usetab,newtab
+
+" omnicomplete
+" TODO: find classy remaps so you don't need <c-x><c-o>
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
