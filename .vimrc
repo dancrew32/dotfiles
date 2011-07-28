@@ -21,8 +21,8 @@ imap {( {<CR><CR>});<up><Tab>
 imap {{ {<CR><CR>}<up><Tab>
 imap (( ()<left>
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
-noremap <c-s-up> ::call feedkeys( line('.')==1 ? ' : 'ddkP' )<CR>
-noremap <c-s-down> ddp
+noremap <c-s-k> ::call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
+noremap <c-s-j> ddp
 
 
 "Sessions
