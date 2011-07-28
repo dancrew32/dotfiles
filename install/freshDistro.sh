@@ -36,7 +36,7 @@ sudo fc-cache -fv &&
 # get more cool stuff
 sudo apt-get -y install redshift virtualbox-ose moc filezilla safe-rm git-gui gitk &&
 git clone https://github.com/joelthelion/autojump.git && cd autojump && sudo ./install.sh && cd ~/Desktop && sudo rm autojump -rf &&
-git clone git://github.com/rupa/v.git && cd v && mv v /usr/local/bin/ && cd ~/Desktop && sudo rm v -rf &&
+git clone git://github.com/rupa/v.git && cd v && sudo mv v /usr/local/bin/ && cd ~/Desktop && sudo rm v -rf &&
 sudo gem install vimgolf &&
 sudo apt-get -y install vlc mplayer espeak gsfonts gsfonts-x11 flashplugin-nonfree &&
 sudo apt-get -y install wine playonlinux unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack lha arj cabextract file-roller &&
