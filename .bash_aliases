@@ -152,7 +152,7 @@ function say() {
 }
 
 #vim aliases
-alias evrc='svi ~/.vimrc && source ~/.vimrc'
+alias evrc='svi ~/.vimrc' 
 alias v='/usr/local/bin/v'
 
 #mysql
