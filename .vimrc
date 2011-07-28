@@ -9,33 +9,27 @@ set history=700
 set autoread
 set shortmess=a
 
-filetype plugin indent on
 
+"Filetypes
+filetype plugin indent on
 au BufNewFile,BufRead *.less set filetype=less
 
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
 
 "Badass mappings
-:imap kj <Esc>
-:imap {( {<CR><CR>});<up><Tab>
-:imap {{ {<CR><CR>}<up><Tab>
-:imap (( ()<left>
-:nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
-set completeopt=longest,menuone
+imap kj <Esc>
+imap {( {<CR><CR>});<up><Tab>
+imap {{ {<CR><CR>}<up><Tab>
+imap (( ()<left>
+nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
+noremap <c-s-up> ::call feedkeys( line('.')==1 ? ' : 'ddkP' )<CR>
+noremap <c-s-down> ddp
+
 
 "Sessions
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 nmap SSA :wa<CR>:mksession! ~/sessions/
 nmap SO :wa<CR>:so ~/sessions/
 
-"Use the arrows to something usefull
-map <right> :tabn<CR>
-map <left> :tabp<CR>
 
 " Tab configuration
 ca tn tabnew
@@ -45,16 +39,26 @@ nmap <silent> <C-n> :tabnext<CR>
 nmap <silent> <C-p> :tabprev<CR>
 imap <silent> <C-n> <esc><C-n>
 imap <silent> <C-p> <esc><C-p>
+map <right> :tabn<CR>
+map <left> :tabp<CR>
+
 
 " recursively grep current directory for word under cursor
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 " open quicklist items in new tabs (avoid duplicates)
 set switchbuf+=usetab,newtab
 
-" omnicomplete
-" TODO: find classy remaps so you don't need <c-x><c-o>
+
+" Omnicomplete
+set completeopt=longest,menuone
+set cot+=menuone
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"PHP
+let php_sql_query=1
+let php_htmlInStrings=1
+let php_noShortTags=1
+let php_folding=1
