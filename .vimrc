@@ -20,6 +20,7 @@ imap kj <Esc>
 imap {( {<CR><CR>});<up><Tab>
 imap {{ {<CR><CR>}<up><Tab>
 imap (( ()<left>
+imap [[ []<left>
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 noremap <c-s-k> ::call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
 noremap <c-s-j> ddp
